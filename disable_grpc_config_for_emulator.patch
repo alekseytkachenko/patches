@@ -1,0 +1,19 @@
+diff --git a/src/EmulatorTrait.php b/src/EmulatorTrait.php
+--- a/src/EmulatorTrait.php	(revision 56d31be2663780a7ed0736bee60d01f047bf15c0)
++++ b/src/EmulatorTrait.php	(date 1719844494446)
+@@ -38,13 +38,13 @@
+ 
+         return [
+             'apiEndpoint' => $emulatorHost,
+-            'transportConfig' => [
++            /*'transportConfig' => [
+                 'grpc' => [
+                     'stubOpts' => [
+                         'credentials' => \Grpc\ChannelCredentials::createInsecure()
+                     ]
+                 ]
+-            ],
++            ],*/
+             'credentials' => new InsecureCredentialsWrapper(),
+         ];
+     }
